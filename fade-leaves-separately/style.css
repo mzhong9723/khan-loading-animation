@@ -1,0 +1,58 @@
+.svg-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.svg-container svg {
+	width: 50vw;
+}
+
+
+@keyframes leaves {
+	0% {opacity: 0;}
+	50% {opacity: 1;}
+	100% {opacity: 0;}
+}
+
+
+/* fade in dot and leaves at the same time */
+/*.cls-7 {
+	animation: leaves 2s ease-in-out infinite;
+}*/
+
+@keyframes left-leaf {
+	0% {opacity: 0;}
+	25% {opacity: 1;}
+	50% {opacity: 1;}
+	75% {opacity: 1;}
+	100% {opacity: 0;}
+}
+
+.left-leaf {
+	animation: left-leaf 4s linear infinite;
+}
+
+@keyframes right-leaf {
+	0% {opacity: 0;}
+	25% {opacity: 0;}
+	50% {opacity: 1;}
+	75% {opacity: 1;}
+	100% {opacity: 0;}
+}
+
+.right-leaf {
+	animation: right-leaf 4s linear infinite;
+}
+
+@keyframes dot {
+	0% {opacity: 0;}
+	25% {opacity: 0;}
+	50% {opacity: 0;}
+	75% {opacity: 1;}
+	100% {opacity: 0;}
+}
+
+.dot {
+	animation: dot 4s linear infinite;
+}
