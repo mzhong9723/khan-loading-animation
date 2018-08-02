@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+
+		body {
+			--count: 5;
+			--honeycomb-width: 100px;
+			--spacing: 4px;
+			margin-top: 10vh;
+			display: flex;
+			justify-content: center;
+			align-content: center;
+		}
+		.honeycomb {
+			width: calc((var(--honeycomb-width) + var(--spacing)) * var(--count));
+			height: calc((var(--honeycomb-width) + var(--spacing)) * var(--count));
+			position: relative;
+		}
+
+		.row {
+			width: inherit;
+			height: calc((var(--honeycomb-width)) * 1.1547);
+			margin-top: calc(-1 * var(--honeycomb-width) * 0.288675 + var(--spacing));
+			float: left;
+		}
+
+		.hexagon {
+			width: var(--honeycomb-width);
+			height: calc((var(--honeycomb-width)) * 1.1547);
+			float: left;
+			margin-right: var(--spacing);
+		}
+
+
+		.odd {
+			margin-left: calc(var(--honeycomb-width) / 2 + var(--spacing) / 2);
+		}
+
+
+		/* Animations */
+		@keyframes hexagon-fade {
+			0% {opacity: 0;}
+			50% {opacity: 1;}
+			100% {opacity: 0;}
+		}
+
+		.hexagon {
+			animation: hexagon-fade 2s ease-in-out infinite;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="honeycomb">
+		<div class="row odd">
+			<div class="hexagon">
+				<img src="svg/logo-original.svg">
+			</div>
+			<div class="hexagon">
+				<img src="svg/logo-original.svg">
+			</div>
+			<div class="hexagon">
+				<img src="svg/logo-original.svg">
+			</div>
+			<div class="hexagon">
+				<img src="svg/logo-original.svg">
+			</div>
+		</div>
+		<div class="row even">
+			<div class="hexagon">
+				<img src="svg/logo-original.svg">
+			</div>
+			<div class="hexagon">
+				<img src="svg/logo-original.svg">
+			</div>
+			<div class="hexagon">
+				<img src="svg/logo-original.svg">
+			</div>
+			<div class="hexagon">
+				<img src="svg/logo-original.svg">
+			</div>
+			<div class="hexagon">
+				<img src="svg/logo-original.svg">
+			</div>
+		</div>
+		<div class="row odd">
+			<div class="hexagon">
+				<img src="svg/logo-original.svg">
+			</div>
+			<div class="hexagon">
+				<img src="svg/logo-original.svg">
+			</div>
+			<div class="hexagon">
+				<img src="svg/logo-original.svg">
+			</div>
+			<div class="hexagon">
+				<img src="svg/logo-original.svg">
+			</div>
+		</div>
+		<div class="row even">
+			<div class="hexagon">
+				<img src="svg/logo-original.svg">
+			</div>
+			<div class="hexagon">
+				<img src="svg/logo-original.svg">
+			</div>
+			<div class="hexagon">
+				<img src="svg/logo-original.svg">
+			</div>
+			<div class="hexagon">
+				<img src="svg/logo-original.svg">
+			</div>
+			<div class="hexagon">
+				<img src="svg/logo-original.svg">
+			</div>
+		</div>
+		<div class="row odd">
+			<div class="hexagon">
+				<img src="svg/logo-original.svg">
+			</div>
+			<div class="hexagon">
+				<img src="svg/logo-original.svg">
+			</div>
+			<div class="hexagon">
+				<img src="svg/logo-original.svg">
+			</div>
+			<div class="hexagon">
+				<img src="svg/logo-original.svg">
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
