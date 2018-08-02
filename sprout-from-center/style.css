@@ -1,0 +1,38 @@
+.svg-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.svg-container svg {
+	width: 50vw;
+}
+
+@keyframes left-leaf {
+	0% {transform:  translateX(3px) translateY(5px) rotate(42deg);}
+	75% {transform: translateX(0) translateY(0) rotate(0);}
+}
+
+.left-leaf {
+	transform-origin: 51% 79%;
+	animation: left-leaf 3s ease-out infinite;
+}
+
+@keyframes right-leaf {
+	0% {transform: translateX(-3px) translateY(5px) rotate(-42deg);}
+	75% {transform: translateX(0) translateY(0) rotate(0);}
+}
+
+.right-leaf {
+	transform-origin: 52% 79%;
+	animation: right-leaf 3s ease-out infinite;
+}
+
+@keyframes dot {
+	0% {transform: translateY(75px);}
+	75% {transform: translateY(0);}
+}
+
+.dot {
+	animation: dot 3s ease-out infinite;
+}
