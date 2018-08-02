@@ -1,7 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<style type="text/css">
+		.svg-container {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.svg-container svg {
+			width: 50vw;
+		}
+
+
+		@keyframes leaves {
+			0% {opacity: 0;}
+			50% {opacity: 1;}
+			100% {opacity: 0;}
+		}
+
+		@keyframes leaf {
+			0% {opacity: 0;}
+			33% {opacity: 1;}
+			66% {opacity: 1;}
+			100% {opacity: 0;}
+		}
+
+		.leaf {
+			animation: leaf 4s linear infinite;
+		}
+
+		@keyframes dot {
+			0% {opacity: 0;}
+			33% {opacity: 0;}
+			66% {opacity: 1;}
+			100% {opacity: 0;}
+		}
+
+		.dot {
+			animation: dot 4s linear infinite;
+		}
+	</style>
 </head>
 <body>
 	<div class="svg-container">

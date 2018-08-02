@@ -1,7 +1,59 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<style type="text/css">
+		.svg-container {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.svg-container svg {
+			width: 50vw;
+		}
+
+		@keyframes leaves {
+			0% {opacity: 0;}
+			50% {opacity: 1;}
+			100% {opacity: 0;}
+		}
+
+		@keyframes left-leaf {
+			0% {opacity: 0;}
+			25% {opacity: 1;}
+			50% {opacity: 1;}
+			75% {opacity: 1;}
+			100% {opacity: 0;}
+		}
+
+		.left-leaf {
+			animation: left-leaf 4s linear infinite;
+		}
+
+		@keyframes right-leaf {
+			0% {opacity: 0;}
+			25% {opacity: 0;}
+			50% {opacity: 1;}
+			75% {opacity: 1;}
+			100% {opacity: 0;}
+		}
+
+		.right-leaf {
+			animation: right-leaf 4s linear infinite;
+		}
+
+		@keyframes dot {
+			0% {opacity: 0;}
+			25% {opacity: 0;}
+			50% {opacity: 0;}
+			75% {opacity: 1;}
+			100% {opacity: 0;}
+		}
+
+		.dot {
+			animation: dot 4s linear infinite;
+		}
+	</style>
 </head>
 <body>
 	<div class="svg-container">
@@ -31,9 +83,6 @@
 					.cls-7 {
 						fill: #fff;
 					}
-					.cls-8 {
-						fill: #00b18f;
-					}
 				</style>
 				<clipPath id="clip-path">
 					<path class="cls-1" d="M11.57,71.6A19.78,19.78,0,0,0,1.74,88.7V223.16a19.75,19.75,0,0,0,9.83,17.09l115.82,67.23a19.55,19.55,0,0,0,19.65,0l115.83-67.23a19.74,19.74,0,0,0,9.82-17.09V88.7a19.77,19.77,0,0,0-9.82-17.1L147,4.38a19.6,19.6,0,0,0-19.65,0Z"/>
@@ -54,9 +103,6 @@
 					</g>
 					<path class="cls-7 left-leaf" d="M138.83,236.81c0-.82,0-1.63,0-2.45,0-58.15-45.24-105.31-101.15-105.6a110.24,110.24,0,0,0-.56,11.12c0,45.48,27.67,84.24,66.46,99.12a98.35,98.35,0,0,0,34.74,6.72"/>
 					<path class="cls-7 right-leaf" d="M138.35,245.72h1.08a98.45,98.45,0,0,0,46.4-11.59h-.25c33.09-17.42,55.77-53.08,55.77-94.26a108.81,108.81,0,0,0-.55-11c-54.25,2.22-97.59,48.6-97.59,105.52,0,.79,0,1.58,0,2.37-1.26.05-2.53.09-3.81.09h-.6"/>
-					<path class="cls-8" d="M124.83,112.87a1.88,1.88,0,0,0,0-3.75,1.88,1.88,0,0,0,0,3.75Z"/>
-					<path class="cls-8" d="M154,108.71a1.88,1.88,0,0,0,0-3.75,1.88,1.88,0,0,0,0,3.75Z"/>
-					<path class="cls-8" d="M133.78,127.68c6.45,2.22,17.13.58,17.93-7.85.15-1.6-2.35-1.59-2.5,0-.31,3.21-4.16,5.57-7,6.22a14.14,14.14,0,0,1-7.82-.78c-1.52-.52-2.18,1.89-.66,2.41Z"/>
 				</g>
 			</g>
 		</svg>
