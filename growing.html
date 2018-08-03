@@ -40,25 +40,27 @@
 			animation: circle var(--cycle) var(--curve) infinite;
 		}
 
-/*		.leaf {
-		  animation: leaf var(--cycle) linear infinite;
+		.center {
+			transform-origin: bottom center;
+			transform-box: fill-box;
+			animation: center var(--cycle) var(--curve) infinite;
 		}
 
-		@keyframes leaf {
-			0%, 100% {
-				transform: scale(0.5);
-				opacity: 0;
+		@keyframes center {
+			0%, 5%, 95%, 100% {
+				transform: scale(0.3);
+				opacity: var(--start-opacity);
 			}
 
-			50% {
+			45%, 55% {
 				transform: scale(1);
 				opacity: 1;
 			}
-		}*/
+		}
 
 		@keyframes left {
 			0%, 5%, 95%, 100% {
-				transform: translateX(3px) rotate(40deg) scale(0.5);
+				transform: translateX(2px) rotate(40deg) scale(0.5);
 				opacity: var(--start-opacity);
 			}
 
@@ -70,7 +72,7 @@
 
 		@keyframes right {
 			0%, 5%, 95%, 100% {
-				transform: translateX(-3px) rotate(-40deg) scale(0.5);
+				transform: translateX(-2px) rotate(-40deg) scale(0.5);
 				opacity: var(--start-opacity);
 			}
 
@@ -110,6 +112,7 @@
 					<g class="cls-4"><rect class="cls-5" width="274.43" height="311.87"/></g>
 					<g class="cls-6 circle"><rect class="cls-7" x="103.26" y="69.57" width="71.99" height="71.83"/></g>
 					<path class="cls-7 right leaf" d="M144,245.62a98.45,98.45,0,0,0,41.83-11.48h-.25c33.09-17.42,55.77-53.08,55.77-94.26a108.81,108.81,0,0,0-.55-11c-54.25,2.22-97.59,48.6-97.59,105.52,0,.79,0,1.58,0,2.37"/>
+					<path class="cls-7 center" d="M144,245.62c-1.51.07-3,.11-4.57.11h-1.2l.6-8.91h.6c1.28,0,2.55,0,3.81-.09Z"/>
 					<path class="cls-7 left leaf" d="M138.23,245.72A98.22,98.22,0,0,1,103.61,239c-38.79-14.88-66.46-53.64-66.46-99.12a110.24,110.24,0,0,1,.56-11.12c55.91.29,101.15,47.45,101.15,105.6,0,.82,0,1.63,0,2.45Z"/>
 
 				</g></g>
