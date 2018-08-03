@@ -30,6 +30,7 @@
 			height: calc((var(--honeycomb-width)) * 1.1547);
 			float: left;
 			margin-right: var(--spacing);
+			opacity: 0;
 		}
 
 
@@ -46,7 +47,9 @@
 		}
 
 		.hexagon {
-			animation: hexagon-fade 2s ease-in-out infinite;
+			animation-name: hexagon-fade;
+			animation-timing-function: ease-in-out;
+			animation-iteration-count: infinite;
 		}
 
 	</style>
@@ -130,6 +133,8 @@
 			</div>
 		</div>
 	</div>
+
+	<script type="text/javascript" src="honeycomb.js"></script>
 
 </body>
 </html>
