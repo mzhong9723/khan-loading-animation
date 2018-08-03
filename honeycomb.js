@@ -1,7 +1,7 @@
 var hexagons = document.getElementsByClassName("hexagon");
 var maxDelay = 2;
-var minLength = 2;
-var maxLength = 6;
+var minLength = 4;
+var maxLength = 8;
 
 for (var i = 0; i < hexagons.length; i++) {
 	var randomDelay = Math.random() * maxDelay;
