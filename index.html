@@ -18,15 +18,21 @@
     }
 
     #honeycomb-container {
-      margin-top: 100px;
+      margin-top: 50px;
       height: 650px;
-      width: 750px;
+      width: 100vw;
     }
 
-    #honeycomb {
-      width: inherit;
+    #honeycomb-container {
+      display: flex;
+      align-content: horizontal;
+    }
+
+    .special {
+      width: 50vw;
       height: inherit;
     }
+
   </style>
 </head>
 
@@ -44,7 +50,7 @@
     <object type="text/html" data="fade-leaves-separately.html"></object>
     <object type="text/html" data="fade-leaves-smiley.html"></object>
     <object type="text/html" data="fade-leaves-together.html"></object>
-    <object type="text/html" data="dash.html"></object>
+<!--     <object type="text/html" data="dash.html"></object>     -->
     <object type="text/html" data="sprout-from-center.html"></object>
     <object type="text/html" data="rainbow.html"></object>
     <object type="text/html" data="rainbow-khan.html"></object>
@@ -53,7 +59,8 @@
   </div>
 
   <div id="honeycomb-container">
-    <object id="honeycomb" type="text/html" data="honeycomb.html"></object>
+    <object class="special" type="text/html" data="honeycomb.html"></object>
+    <object class="special" type="text/html" data="logo-stroke.html"></object>
   </div>
 
 
