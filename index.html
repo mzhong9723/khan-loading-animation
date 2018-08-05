@@ -3,7 +3,12 @@
   <style type="text/css">
 
     body {
+    }
 
+    .container {
+      display: grid;
+      grid-auto-columns: auto;
+      width: 90vw
     }
 
     object {
@@ -14,7 +19,21 @@
 
     h1 {
       font-family: sans-serif;
-      margin: 50px;    
+      margin: 50px 50px 0px 50px;
+      text-align: center;
+      width: inherit;
+    }
+
+    #logos-container {
+      margin: 50px;
+      width: inherit;
+    }
+
+    .section {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      margin: 100px 50px 100px 50px;
     }
 
     #honeycomb-container {
@@ -37,32 +56,35 @@
 </head>
 
   <body>
-  <h1>New logo animations</h1>
+    <div class="container">
 
-  <script>
-    
-  </script>
+      <h1>Spinner 2.0</h1>
 
-  
-  <div id="logos-container">
-    <object type="text/html" data="growing.html"></object>
-    <object type="text/html" data="sprout-from-center.html"></object>
-    <object type="text/html" data="spinner.html"></object>
-    <object type="text/html" data="wobble.html"></object>
-    <object type="text/html" data="wobble-entire.html"></object>
-    <object type="text/html" data="fade-leaves-separately.html"></object>
-    <object type="text/html" data="fade-leaves-smiley.html"></object>
-    <object type="text/html" data="fade-leaves-together.html"></object>
-<!--     <object type="text/html" data="dash.html"></object>     -->
-    <object type="text/html" data="rainbow.html"></object>
-    <object type="text/html" data="rainbow-khan.html"></object>
-  </div>
+      <div id="logos-container">
+        <div id="sprouting" class="section">
+          <object type="text/html" data="growing.html"></object>
+          <object type="text/html" data="sprout-from-center.html"></object>
+        </div>
+        <div id="fading" class="section">
+          <object type="text/html" data="fade-leaves-separately.html"></object>
+          <object type="text/html" data="fade-leaves-smiley.html"></object>
+          <object type="text/html" data="fade-leaves-together.html"></object>
+        </div>
+        <div id="rainbow" class="section">
+          <object type="text/html" data="rainbow.html"></object>
+          <object type="text/html" data="rainbow-khan.html"></object>
+        </div>
+        <div id="spinner" class="section">
+          <object type="text/html" data="wobble-entire.html"></object>
+          <object type="text/html" data="spinner.html"></object>
+          <object type="text/html" data="wobble.html"></object>
+        </div>
+        <div id="honeycomb-container" class="section">
+          <object class="special" type="text/html" data="honeycomb.html"></object>
+          <object class="special" type="text/html" data="logo-stroke.html"></object>
+        </div>
+      </div>
 
-  <div id="honeycomb-container">
-    <object class="special" type="text/html" data="honeycomb.html"></object>
-    <object class="special" type="text/html" data="logo-stroke.html"></object>
-  </div>
-
-
+    </div>
   </body>
 </html>
