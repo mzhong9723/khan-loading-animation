@@ -3,12 +3,32 @@
   <style type="text/css">
 
     body {
+      display: grid;
+      grid-template-columns: 10% 90%;
+    }
+
+    .navgiation {
+      display: grid;
+      grid-template-rows: auto;
+    }
+
+    .navigation {
+      margin-top: 100px;
+    }
+
+    .link {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      font-family: sans-serif;
+      text-align: center;
+      margin: 10px;
     }
 
     .container {
       display: grid;
-      grid-auto-columns: auto;
-      width: 90vw
+      grid-template-columns: auto;
+      width: 90%;
     }
 
     object {
@@ -26,7 +46,7 @@
 
     #logos-container {
       margin: 50px;
-      width: inherit;
+      width: 90%;
     }
 
     .section {
@@ -36,13 +56,13 @@
       margin: 100px 50px 100px 50px;
     }
 
-    #honeycomb-container {
+    #honeycomb {
       margin-top: 50px;
       height: 650px;
-      width: 100vw;
+      width: 90%;
     }
 
-    #honeycomb-container {
+    #honeycomb {
       display: flex;
       align-content: horizontal;
     }
@@ -56,10 +76,23 @@
       margin-top: 50px;
     }
 
+    #fading, #rainbow, #spinner, #honeycomb, #stroke {
+      display: none;
+    }
+
   </style>
 </head>
 
   <body>
+    <div class="navigation">
+      <a id="sprouting-link" href="#" onclick="changeLogo(1)" class="link">sprouting</a>
+      <a id="fading-link" href="#" onclick="changeLogo(2)" class="link">fading</a>
+      <a id="rainbow-link" href="#" onclick="changeLogo(3)" class="link">rainbow</a>
+      <a id="spinner-link" href="#" onclick="changeLogo(4)" class="link">spinning & wobbling</a>
+      <a id="stroke-link" href="#" onclick="changeLogo(5)" class="link">stroke</a>
+      <a id="honeycomb-link" href="#" onclick="changeLogo(6)" class="link">honeycomb</a>
+      <a id="all-link" href="#" onclick="changeLogo(7)" class="link">all</a>
+    </div>
     <div class="container">
 
       <h1>Spinner 2.0</h1>
@@ -83,12 +116,71 @@
           <object type="text/html" data="spinner.html"></object>
           <object type="text/html" data="wobble.html"></object>
         </div>
-        <div id="honeycomb-container" class="section">
+        <div id="stroke" class="section">
+          <object type="text/html" data="logo-stroke.html"></object>
+        </div>
+        <div id="honeycomb" class="section">
           <object class="special" type="text/html" data="honeycomb.html"></object>
-          <object class="special" type="text/html" data="logo-stroke.html"></object>
         </div>
       </div>
 
     </div>
+
+    <script>
+      function changeLogo(i) {
+        if (i == 1) {
+          hideLogos();
+          document.getElementById("sprouting").style.display = "flex";
+          document.getElementById("sprouting-link").style.color = "#d92916";
+        } else if (i == 2) {
+          hideLogos();
+          document.getElementById("fading").style.display = "flex";
+        } else if (i == 3) {
+          hideLogos();
+          document.getElementById("rainbow").style.display = "flex";
+        } else if (i == 4) {
+          hideLogos();
+          document.getElementById("spinner").style.display = "flex";
+        } else if (i == 5) {
+          hideLogos();
+          document.getElementById("stroke").style.display = "flex";
+        } else if (i == 6) {
+          hideLogos();
+          document.getElementById("honeycomb").style.display = "flex";
+        } else if (i == 7) {
+          document.getElementById("sprouting").style.display = "flex";
+          document.getElementById("fading").style.display = "flex";
+          document.getElementById("rainbow").style.display = "flex";
+          document.getElementById("spinner").style.display = "flex";
+          document.getElementById("stroke").style.display = "flex";
+          document.getElementById("honeycomb").style.display = "flex";
+        } else {
+          document.getElementById("sprouting").style.display = "flex";
+          document.getElementById("fading").style.display = "flex";
+          document.getElementById("rainbow").style.display = "flex";
+          document.getElementById("spinner").style.display = "flex";
+          document.getElementById("stroke").style.display = "flex";
+          document.getElementById("honeycomb").style.display = "flex";
+        }
+      }
+
+      function hideLogos() {
+        document.getElementById("sprouting").style.display = "none";
+        document.getElementById("fading").style.display = "none";
+        document.getElementById("rainbow").style.display = "none";
+        document.getElementById("spinner").style.display = "none";
+        document.getElementById("stroke").style.display = "none";
+        document.getElementById("honeycomb").style.display = "none";
+
+
+        document.getElementById("sprouting-link").style.color = "black";
+        document.getElementById("fading-link").style.color = "black";
+        document.getElementById("rainbow-link").style.color = "black";
+        document.getElementById("spinner-link").style.color = "black";
+        document.getElementById("stroke-link").style.color = "black";
+        document.getElementById("honeycomb-link").style.color = "black";
+        document.getElementById("all-link").style.color = "black";
+      }
+    </script>
   </body>
 </html>
