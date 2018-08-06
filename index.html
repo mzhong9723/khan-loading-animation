@@ -7,6 +7,14 @@
       grid-template-columns: 10% 90%;
     }
 
+    a {
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
     .navgiation {
       display: grid;
       grid-template-rows: auto;
@@ -56,13 +64,13 @@
       margin: 100px 50px 100px 50px;
     }
 
-    #honeycomb {
+    #honeycomb, #multi-spin {
       margin-top: 50px;
       height: 650px;
       width: 90%;
     }
 
-    #honeycomb {
+    #honeycomb, #multi-spin {
       display: flex;
       align-content: horizontal;
     }
@@ -76,7 +84,11 @@
       margin-top: 50px;
     }
 
-    #fading, #rainbow, #spinner, #honeycomb, #stroke {
+    #sprouting-link {
+      color: "#9059ff";
+    }
+
+    #fading, #rainbow, #spinner, #honeycomb, #stroke, #wobble, #multi-spin {
       display: none;
     }
 
@@ -88,10 +100,12 @@
       <a id="sprouting-link" href="#" onclick="changeLogo(1)" class="link">sprouting</a>
       <a id="fading-link" href="#" onclick="changeLogo(2)" class="link">fading</a>
       <a id="rainbow-link" href="#" onclick="changeLogo(3)" class="link">rainbow</a>
-      <a id="spinner-link" href="#" onclick="changeLogo(4)" class="link">spinning & wobbling</a>
-      <a id="stroke-link" href="#" onclick="changeLogo(5)" class="link">stroke</a>
-      <a id="honeycomb-link" href="#" onclick="changeLogo(6)" class="link">honeycomb</a>
-      <a id="all-link" href="#" onclick="changeLogo(7)" class="link">all</a>
+      <a id="spinner-link" href="#" onclick="changeLogo(4)" class="link">spinning</a>
+      <a id="wobble-link" href="#" onclick="changeLogo(5)" class="link">wobble</a>
+      <a id="stroke-link" href="#" onclick="changeLogo(6)" class="link">stroke</a>
+      <a id="multi-spin-link" href="#" onclick="changeLogo(7)" class="link">multi-spin</a>
+      <a id="honeycomb-link" href="#" onclick="changeLogo(8)" class="link">honeycomb</a>
+      <a id="all-link" href="#" onclick="changeLogo(9)" class="link">all</a>
     </div>
     <div class="container">
 
@@ -112,8 +126,12 @@
           <object type="text/html" data="rainbow-khan.html"></object>
         </div>
         <div id="spinner" class="section">
-          <object type="text/html" data="wobble-entire.html"></object>
+          <object type="text/html" data="pizza-spin.html"></object>
           <object type="text/html" data="spinner.html"></object>
+          <object type="text/html" data="sector-spin.html"></object>
+        </div>
+        <div id="wobble" class="section">
+          <object type="text/html" data="wobble-entire.html"></object>
           <object type="text/html" data="wobble.html"></object>
         </div>
         <div id="stroke" class="section">
@@ -122,15 +140,10 @@
         <div id="honeycomb" class="section">
           <object class="special" type="text/html" data="honeycomb.html"></object>
         </div>
-      </div>
-
-<!-- Mary, move these -->
-        <div id="more-spinner" class="section">
-            <object type="text/html" data="pizza-spin.html"></object>
-            <object type="text/html" data="sector-spin.html"></object>
-            <object type="text/html" data="multi-spin.html"></object>
+        <div id="multi-spin" class="section">
+          <object class="special" type="text/html" data="multi-spin.html"></object>
         </div>
-
+      </div>
     </div>
 
     <script>
@@ -138,36 +151,66 @@
         if (i == 1) {
           hideLogos();
           document.getElementById("sprouting").style.display = "flex";
-          document.getElementById("sprouting-link").style.color = "#d92916";
+          document.getElementById("sprouting-link").style.color = "#9059ff";
         } else if (i == 2) {
           hideLogos();
           document.getElementById("fading").style.display = "flex";
+          document.getElementById("fading-link").style.color = "#9059ff";
         } else if (i == 3) {
           hideLogos();
           document.getElementById("rainbow").style.display = "flex";
+          document.getElementById("rainbow-link").style.color = "#9059ff";
         } else if (i == 4) {
           hideLogos();
           document.getElementById("spinner").style.display = "flex";
+          document.getElementById("spinner-link").style.color = "#9059ff";
         } else if (i == 5) {
           hideLogos();
-          document.getElementById("stroke").style.display = "flex";
+          document.getElementById("wobble").style.display = "flex";
+          document.getElementById("wobble-link").style.color = "#9059ff";
         } else if (i == 6) {
           hideLogos();
-          document.getElementById("honeycomb").style.display = "flex";
+          document.getElementById("stroke").style.display = "flex";
+          document.getElementById("stroke-link").style.color = "#9059ff";
         } else if (i == 7) {
+          hideLogos();
+          document.getElementById("multi-spin").style.display = "flex";
+          document.getElementById("multi-spin-link").style.color = "#9059ff";
+        } else if (i == 8) {
+          hideLogos();
+          document.getElementById("honeycomb").style.display = "flex";
+          document.getElementById("honeycomb-link").style.color = "#9059ff";
+        } else if (i == 9) {
           document.getElementById("sprouting").style.display = "flex";
           document.getElementById("fading").style.display = "flex";
           document.getElementById("rainbow").style.display = "flex";
           document.getElementById("spinner").style.display = "flex";
+          document.getElementById("wobble").style.display = "flex";
           document.getElementById("stroke").style.display = "flex";
           document.getElementById("honeycomb").style.display = "flex";
+          document.getElementById("multi-spin").style.display = "flex";
+
+          document.getElementById("all-link").style.color = "#9059ff";
+
+          document.getElementById("sprouting-link").style.color = "black";
+          document.getElementById("fading-link").style.color = "black";
+          document.getElementById("rainbow-link").style.color = "black";
+          document.getElementById("spinner-link").style.color = "black";
+          document.getElementById("wobble-link").style.color = "black";
+          document.getElementById("stroke-link").style.color = "black";
+          document.getElementById("honeycomb-link").style.color = "black";
+          document.getElementById("multi-spin-link").style.color = "black";
         } else {
           document.getElementById("sprouting").style.display = "flex";
           document.getElementById("fading").style.display = "flex";
           document.getElementById("rainbow").style.display = "flex";
           document.getElementById("spinner").style.display = "flex";
+          document.getElementById("wobble").style.display = "flex";
           document.getElementById("stroke").style.display = "flex";
           document.getElementById("honeycomb").style.display = "flex";
+          document.getElementById("multi-spin").style.display = "flex";
+
+          document.getElementById("all-link").style.color = "#9059ff";
         }
       }
 
@@ -176,16 +219,19 @@
         document.getElementById("fading").style.display = "none";
         document.getElementById("rainbow").style.display = "none";
         document.getElementById("spinner").style.display = "none";
+        document.getElementById("wobble").style.display = "none";
         document.getElementById("stroke").style.display = "none";
         document.getElementById("honeycomb").style.display = "none";
-
+        document.getElementById("multi-spin").style.display = "none";
 
         document.getElementById("sprouting-link").style.color = "black";
         document.getElementById("fading-link").style.color = "black";
         document.getElementById("rainbow-link").style.color = "black";
         document.getElementById("spinner-link").style.color = "black";
+        document.getElementById("wobble-link").style.color = "black";
         document.getElementById("stroke-link").style.color = "black";
         document.getElementById("honeycomb-link").style.color = "black";
+        document.getElementById("multi-spin-link").style.color = "black";
         document.getElementById("all-link").style.color = "black";
       }
     </script>
