@@ -48,10 +48,14 @@
     .sweeper {
       position: absolute;
       width: 46%;
+      margin-left: 45px;
     }
 
     #logo-wrapper {
       width: 40vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .sector2 {
@@ -80,6 +84,7 @@
      </div>
 
     <div class="sektor1 sweeper"></div>
+    <div class="sektor1 sweeper"></div>
 
   </div>
 
@@ -92,26 +97,20 @@
       angle: 0,
       sectorColor: 'white',
       circleColor: 'transparent',
-      fillCircle: false
     });
+
+    const time = 1000;
     let sec = 0;
 
     let interval = setInterval(() => {
       if (sec % 2 === 0) {
-        sektor1.animateTo(360, 1000);
-      }
-      else {
-        sektor1.animateTo(0, 1000);
+        sektor1.animateTo(360, time);
+      } else {
+        sektor1.animateTo(0, time);
       }
       sec += 1;
+    }, 1500);
 
-      if (sec > 16) {
-        clearInterval(interval);
-      }
-    }, 1200);
-
-
-    // sektor.animateTo(0, 1000);
 
   </script>
 
