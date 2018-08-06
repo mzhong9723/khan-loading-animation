@@ -10,8 +10,4 @@ for (var i = 0; i < hexagons.length; i++) {
 	var randomLength = Math.random() * (maxLength - minLength);
 	randomLength += minLength;
 	hexagons[i].style.animationDuration = randomLength + "s";
-
-	console.log("hexagon" + i);
-	console.log(randomDelay);
-	console.log(randomLength);
 }
